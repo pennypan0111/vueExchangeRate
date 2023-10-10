@@ -1,0 +1,118 @@
+body{
+    background: #a7d5cf;
+}
+
+.content{
+    padding: 4rem 0;
+}
+@media screen and (min-width: 992px){
+    .content{
+        padding: 2rem 0;
+        height: 100vh;
+        margin: auto;
+    }
+}
+
+/* ----------------- 網頁標題 ----------------- */
+
+.title-CN{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #24544b;
+}
+.title-EG{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+@media screen and (min-width:992px){
+    .title-CN{
+        font-size: 4rem;
+    }
+    .title-EG{
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+}
+
+/* ----------------- 背景圓形 ----------------- */
+.circleBg{
+    background: #ffffff;
+    width: 350px;
+    height: 350px;
+    aspect-ratio: 1/1;
+    border-radius: 400px;
+    margin: 0 30px;
+    position: relative;
+}
+@media screen and (min-width:992px){
+    .circle-group{
+        padding: 48px 0;
+    }
+}
+
+/* ----------------- 等號 ----------------- */
+.equal{
+    font-size: 50px;
+    font-weight: 600;
+    color: #24544b;
+    transform: rotate(90deg);
+}
+@media screen and (min-width:992px){
+    .equal{
+        transform: rotate(0deg);
+    }
+}
+
+/* ----------------- 國家名稱 ----------------- */
+.countryName{
+    font-size: 34px;
+    font-weight: 600;
+    color: #24544b;
+}
+
+/* ----------------- 國旗 ----------------- */
+.flag{
+    width: 150px;
+    padding-bottom: 50px;
+}
+.flag:after{
+    content: '';
+    width: 250px;
+    height: 2px;
+    background: #24544b;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.flag img{
+    width: 100%;
+}
+
+/* ----------------- 金額輸入欄位 ----------------- */
+.amount{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    color: #24544b;
+    border: 0;
+    background: transparent;
+}
+.amount:focus-visible{
+    outline: none;
+}
+
+/* ----------------- 幣值 ----------------- */
+.currency-value{
+    font-size: 20px;
+    font-weight: 600;
+    color: #24544b;
+}
+
+/* ----------------- 目前匯率 ----------------- */
+.reMark{
+    font-size: 20px;
+    font-weight: 600;
+    color: #24544b;
+}
