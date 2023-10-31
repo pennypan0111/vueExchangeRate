@@ -116,3 +116,8 @@ body{
     font-weight: 600;
     color: #24544b;
 }
+
+/* ----------------- 通用 ----------------- */
+.word-break-all{
+    word-break: keep-all;
+}
