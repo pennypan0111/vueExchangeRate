@@ -19,9 +19,8 @@
         this.USDExchangeRate = (response.data.conversion_rates.USD) / (response.data.conversion_rates.TWD); // 1台幣換成美金
         this.JYPExchangeRate = 1 / ((response.data.conversion_rates.USD / response.data.conversion_rates.JPY) * response.data.conversion_rates.TWD); // 1台幣換成日圓
 
-        // const unixTimestamp = response.data.time_last_update_unix-2;
-        const unixTimestamp = response.data.time_last_update_utc;
-        const date = new Date(unixTimestamp); // 乘以 1000 將秒轉換為毫秒
+        const utcTimestamp = response.data.time_last_update_utc; // 抓取 API 中的 UTC 時間
+        const date = new Date(utcTimestamp); // 時期時間轉換
 
         // 使用 Date 物件的方法取得年、月、日、時、分和秒
         const year = date.getFullYear();
@@ -69,7 +68,7 @@
 
         <div class="d-flex flex-column flex-xl-row justify-content-center align-items-center w-100 circle-group">
 
-            <p class="reMark d-lg-none mb-0 text-center word-break-all">目前即時匯率約：1台幣={{ JPYFormattedExchangeRate }}日圓={{ USDFormattedExchangeRate }}美元</p>
+            <p class="reMark d-lg-none mb-0 text-center word-break-all">即時匯率約：1台幣={{ JPYFormattedExchangeRate }}日圓={{ USDFormattedExchangeRate }}美元</p>
             <span class="text-light d-lg-none mb-4 text-center word-break-all">最後更新時間：{{ this.upDateTime }} (每24小時更新一次)</span>
 
             <div class="circleBg col-4 d-flex flex-column justify-content-center align-items-center">
@@ -105,7 +104,7 @@
             
         </div>
 
-        <p class="reMark d-none d-lg-block mb-0">目前即時匯率約：1台幣={{ JPYFormattedExchangeRate }}日圓={{ USDFormattedExchangeRate }}美元</p>
+        <p class="reMark d-none d-lg-block mb-0">即時匯率約：1台幣={{ JPYFormattedExchangeRate }}日圓={{ USDFormattedExchangeRate }}美元</p>
         <span class="text-light d-none d-lg-block">最後更新時間：{{ this.upDateTime }} (每24小時更新一次)</span>
     </div>
 
